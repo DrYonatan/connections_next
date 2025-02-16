@@ -10,14 +10,11 @@ export default async function handler(
 ) {
   await connectDB();
 
-  try {
     if (req.method === "GET") {
       const levels = await AppDataSource.getRepository(Level).find();
       return res.status(200).json(levels);
     }
-  } catch (error) {
-     
-  }
+  
   
 }
 

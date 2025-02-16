@@ -13,21 +13,11 @@ const lightTheme = createTheme({
   },
 });
 
-const darkTheme = createTheme({
-  palette: {
-    mode: "dark",
-    primary: {
-      main: "#424047", // Tailwind's indigo-600
-      contrastText: "white",
-    },
-  },
-});
 
 export default function App() {
   return (
     <ThemeProvider theme={lightTheme}>
       <div>
-        <HeaderComponent />
         <HomePage />
       </div>
     </ThemeProvider>

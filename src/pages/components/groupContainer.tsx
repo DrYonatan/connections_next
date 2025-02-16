@@ -30,7 +30,7 @@ function GroupContainer({ groupName, items, backgroundColor }: ContainerProps) {
       <h2 className="text-2xl">{groupName}</h2>
       <div>
         {items.map((item) => (
-          <span>
+          <span key={item.word}>
             {items[items.length - 1] === item ? item.word : item.word + ", "}
           </span>
         ))}
