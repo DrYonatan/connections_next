@@ -14,7 +14,7 @@ import { Level } from "@/types/level";
 
 type headerProps = {
   level: Level | undefined;
-}
+};
 
 function HeaderComponent(level: headerProps) {
   const [dark, setDark] = useState(false);
@@ -32,9 +32,6 @@ function HeaderComponent(level: headerProps) {
 
   const [open, setOpen] = useState(false);
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
   const handleClose = () => {
     setOpen(false);
   };
@@ -100,10 +97,13 @@ function HeaderComponent(level: headerProps) {
       </div>
 
       <div className="flex items-center">
-        <span onClick={() => setOpen(true)} className="text-2xl m-10 hover:cursor-pointer hover:text-white dark:hover:text-black">
+        <span
+          onClick={() => setOpen(true)}
+          className="text-2xl m-10 hover:cursor-pointer hover:text-white dark:hover:text-black"
+        >
           ?איך משחקים
         </span>
-        <button className="" onClick={() => darkModeHandler()}>
+        <button onClick={() => darkModeHandler()}>
           {dark ? <BedtimeIcon /> : <WbSunnyIcon />}
         </button>
       </div>
