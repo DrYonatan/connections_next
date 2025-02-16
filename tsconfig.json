@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "experimentalDecorators": true,  // Enables decorators
+    "emitDecoratorMetadata": true,   // Emits design-type metadata
+    "strictPropertyInitialization": false,
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,

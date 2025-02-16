@@ -4,10 +4,10 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body className="antialiased">
-        <Main />
-        <NextScript />
-      </body>
+        <body className="antialiased bg-lightTheme-primary dark:bg-darkTheme-primary duration-300 dark:text-white">
+          <Main />
+          <NextScript />
+        </body>
     </Html>
   );
 }
