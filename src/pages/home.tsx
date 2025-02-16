@@ -3,7 +3,6 @@ import {
   AccordionDetails,
   AccordionSummary,
   Typography,
-  useTheme,
 } from "@mui/material";
 import "../styles/globals.css";
 import { useEffect, useState } from "react";
@@ -17,8 +16,6 @@ import { Inventory2 } from "@mui/icons-material";
 import toast, { Toaster } from "react-hot-toast";
 
 function HomePage() {
-  const theme = useTheme();
-
   const [level, setLevel] = useState<Level>();
 
   const [levels, setLevels] = useState<Level[]>([]);
@@ -33,8 +30,6 @@ function HomePage() {
 
   const [wrongGuessCount, setWrongGuessCount] = useState(0);
 
-  const [open, setOpen] = useState(false);
-
   useEffect(() => {
     getLevels().then((data) => {
       setLevels(data);
@@ -48,10 +43,6 @@ function HomePage() {
       }
     });
   }, []);
-
-  const handleClose = () => {
-    setOpen(false);
-  };
 
   const loadNewLevel = (level: Level) => {
     setLevel(level);
@@ -154,7 +145,7 @@ function HomePage() {
             </div>
             <AccordionDetails className="flex gap-2 bg-lightTheme-secondary dark:bg-darkTheme-secondary dark:text-white">
               {levels.map((level) => (
-                <div
+                <div key={level.id}
                   className="cursor-pointer"
                   onClick={() => loadNewLevel(level)}
                 >
