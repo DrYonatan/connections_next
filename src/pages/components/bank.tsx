@@ -1,5 +1,3 @@
-import "../../styles/globals.css";
-
 function Bank() {
   return (
     <div id="accordion-collapse" data-accordion="collapse" className="absolute right">
