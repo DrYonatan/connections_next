@@ -4,7 +4,6 @@ import {
   AccordionSummary,
   Typography,
 } from "@mui/material";
-import "../styles/globals.css";
 import { useEffect, useState } from "react";
 import { GameItem } from "@/types/gameItem";
 import { Group } from "@/types/group";

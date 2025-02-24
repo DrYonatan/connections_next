@@ -1,4 +1,3 @@
-import "../../styles/globals.css";
 import BedtimeIcon from "@mui/icons-material/Bedtime";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import { styled, useColorScheme } from "@mui/material";
