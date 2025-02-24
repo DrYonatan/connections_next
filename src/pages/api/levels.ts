@@ -11,8 +11,9 @@ export default async function handler(
 
   try {
     if (req.method === "GET") {
-      const { date } = req.query;
 
+      const { date } = req.query;
+  
       if (date) {
         const level = await AppDataSource.getRepository(Level).findOne({
           where: { date: new Date(date as string) },
@@ -20,9 +21,13 @@ export default async function handler(
         if (!level) return res.status(404).json({ message: "Level not found" });
         return res.status(200).json(level);
       }
-
+  
       const levels = await AppDataSource.getRepository(Level).find();
       return res.status(200).json(levels);
     }
-  } catch (error) {}
+  } catch (error) {
+    
+  }
+  
 }
+
