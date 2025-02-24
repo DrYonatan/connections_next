@@ -106,7 +106,7 @@ function HomePage() {
         setGameItems(gameItems.filter((item) => !selectedItems.includes(item)));
       } else {
         if (isAlmostCorrect) {
-          toast.error("כל כך קרוב!");
+          toast.error("כ''כ קרוב!");
         }
         setWrongGuessCount(wrongGuessCount + 1);
       }

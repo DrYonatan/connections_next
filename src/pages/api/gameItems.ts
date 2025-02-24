@@ -1,9 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
-import { AppDataSource, connectDB } from "../../../ormconfig";
+import { AppDataSource, connectDB } from "./ormconfig";
 import { GameItem } from "@/entities/gameItem";
-
-
 
 export default async function handler(
   req: NextApiRequest,
