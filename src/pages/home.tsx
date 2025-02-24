@@ -30,6 +30,9 @@ function HomePage() {
   const [wrongGuessCount, setWrongGuessCount] = useState(0);
 
   useEffect(() => {
+    console.log("Host:", process.env.POSTGRES_HOST);
+    console.log("Port:", process.env.DB_PORT);
+    console.log("User:", process.env.POSTGRES_USER);
     getLevels().then((data) => {
       setLevels(data);
     });
@@ -144,7 +147,8 @@ function HomePage() {
             </div>
             <AccordionDetails className="flex gap-2 bg-lightTheme-secondary dark:bg-darkTheme-secondary dark:text-white">
               {levels.map((level) => (
-                <div key={level.id}
+                <div
+                  key={level.id}
                   className="cursor-pointer"
                   onClick={() => loadNewLevel(level)}
                 >
@@ -210,8 +214,8 @@ function HomePage() {
             >
               ניחוש
             </button>
-            <div style={{direction: 'rtl'}}>
-            <Toaster position="top-center" reverseOrder={false} />
+            <div style={{ direction: "rtl" }}>
+              <Toaster position="top-center" reverseOrder={false} />
             </div>
           </div>
         </div>
