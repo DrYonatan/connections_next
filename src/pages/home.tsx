@@ -30,9 +30,6 @@ function HomePage() {
   const [wrongGuessCount, setWrongGuessCount] = useState(0);
 
   useEffect(() => {
-    console.log("Host:", process.env.POSTGRES_HOST);
-    console.log("Port:", process.env.DB_PORT);
-    console.log("User:", process.env.POSTGRES_USER);
     getLevels().then((data) => {
       setLevels(data);
     });
@@ -43,7 +40,7 @@ function HomePage() {
         setAllItems(data.gameItems);
         setGameItems(shuffleItems(data.gameItems));
       }
-    });
+    }).catch(e => console.log(e));
   }, []);
 
   const loadNewLevel = (level: Level) => {

@@ -12,8 +12,8 @@ const getLevelByDate = async (date: Date) => {
   } catch (error) {
     console.error("Error fetching levels:", error);
     throw error; // Optionally re-throw the error if you want to handle it later
-  }  
-}
+  }
+};
 const getLevels = async () => {
   try {
     const response = await fetch(`${serverIP}`);
@@ -26,7 +26,7 @@ const getLevels = async () => {
   } catch (error) {
     console.error("Error fetching levels:", error);
     throw error; // Optionally re-throw the error if you want to handle it later
-  }  
-}
+  }
+};
 
 export { getLevelByDate, getLevels };

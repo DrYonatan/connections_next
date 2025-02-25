@@ -11,7 +11,6 @@ export default async function handler(
 
   try {
     if (req.method === "GET") {
-
       const { date } = req.query;
   
       if (date) {
