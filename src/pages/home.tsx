@@ -176,7 +176,7 @@ function HomePage() {
                 <div
                   key={item.word}
                   onClick={() => selectItem(item)}
-                  className={`w-[180px] h-[100px] font-bold dark:text-white dark:bg-darkTheme-secondary rounded-xl text-lightTheme-text flex items-center justify-center ${
+                  className={`w-[180px] h-[80px] font-bold dark:text-white dark:bg-darkTheme-secondary rounded-xl text-lightTheme-text flex items-center justify-center ${
                     item.selected
                       ? "bg-lightTheme-effect2"
                       : "bg-lightTheme-secondary hover:bg-lightTheme-effect1"
