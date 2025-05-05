@@ -102,7 +102,7 @@ function HeaderComponent(level: headerProps) {
         >
           ?איך משחקים
         </span>
-        <button onClick={() => darkModeHandler()}>
+        <button aria-label="ThemeToggle" onClick={() => darkModeHandler()}>
           {dark ? <BedtimeIcon /> : <WbSunnyIcon />}
         </button>
       </div>

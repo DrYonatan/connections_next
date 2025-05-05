@@ -33,7 +33,7 @@ function HomePage() {
     getLevels().then((data) => {
       setLevels(data);
     });
-    getLevelByDate(new Date("2025-02-12")).then((data) => {
+    getLevelByDate(new Date(Date.now())).then((data) => {
       console.log(data);
       if (data) {
         setLevel(data);
@@ -160,7 +160,7 @@ function HomePage() {
             </span>
           </div>
         </div>
-        <div className="flex flex-col items-center">
+        {level ? <div className="flex flex-col items-center">
           <div className="inline-grid gap-2 my-5 grid-cols-4 w-[750px]">
             {groups.map((group) => (
               <GroupContainer
@@ -215,7 +215,7 @@ function HomePage() {
               <Toaster position="top-center" reverseOrder={false} />
             </div>
           </div>
-        </div>
+        </div> : <p>הייתה תקלה</p>}
       </div>
     </div>
   );
